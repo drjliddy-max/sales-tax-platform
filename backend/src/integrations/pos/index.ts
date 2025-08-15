@@ -1,0 +1,1 @@
+export { SquareIntegration } from './SquareIntegration';

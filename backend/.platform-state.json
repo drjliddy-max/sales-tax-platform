@@ -1,0 +1,27 @@
+{
+    "timestamp": "2025-08-14T13:45:10Z",
+    "platform": {
+        "os": "Darwin",
+        "arch": "arm64",
+        "kernel": "24.6.0",
+        "hostname": "Mac.attlocal.net"
+    },
+    "shell": {
+        "name": "/bin/bash",
+        "version": "3.2.57(1)-release"
+    },
+    "node": {
+        "version": "v24.5.0",
+        "npm_version": "11.5.1"
+    },
+    "git": {
+        "version": "git version 2.39.5 (Apple Git-154)",
+        "user_name": "not set",
+        "user_email": "not set"
+    },
+    "project": {
+        "directory": "/Users/johnliddy/sales-tax-tracker",
+        "frontend_exists": true,
+        "package_json_exists": true
+    }
+}

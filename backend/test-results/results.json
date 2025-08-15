@@ -1,0 +1,222 @@
+{
+  "config": {
+    "configFile": "/Users/johnliddy/sales-tax-tracker/playwright.config.ts",
+    "rootDir": "/Users/johnliddy/sales-tax-tracker/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/johnliddy/sales-tax-tracker/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/johnliddy/sales-tax-tracker/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.54.2",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "button-functionality-builder.spec.ts",
+      "file": "button-functionality-builder.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Landing Page Button Functionality Builder",
+          "file": "button-functionality-builder.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should analyze all buttons and create missing pages",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 7552,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"http://localhost:3001/\u001b[7mlogin\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"http://localhost:3001/\"\u001b[39m\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"http://localhost:3001/\"\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"http://localhost:3001/\u001b[7mlogin\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"http://localhost:3001/\"\u001b[39m\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"http://localhost:3001/\"\u001b[22m\n\n    at testAllButtons (/Users/johnliddy/sales-tax-tracker/tests/e2e/button-functionality-builder.spec.ts:133:28)\n    at /Users/johnliddy/sales-tax-tracker/tests/e2e/button-functionality-builder.spec.ts:73:5",
+                        "location": {
+                          "file": "/Users/johnliddy/sales-tax-tracker/tests/e2e/button-functionality-builder.spec.ts",
+                          "column": 28,
+                          "line": 133
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 131 |\u001b[39m         \u001b[90m// Internal navigation\u001b[39m\n \u001b[90m 132 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 133 |\u001b[39m         \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m`http://localhost:3001${mapping.url}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 134 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Successfully navigated to ${mapping.url}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 135 |\u001b[39m         \n \u001b[90m 136 |\u001b[39m         \u001b[90m// Take screenshot of destination page\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/johnliddy/sales-tax-tracker/tests/e2e/button-functionality-builder.spec.ts",
+                            "column": 28,
+                            "line": 133
+                          },
+                          "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"http://localhost:3001/\u001b[7mlogin\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"http://localhost:3001/\"\u001b[39m\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"http://localhost:3001/\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 131 |\u001b[39m         \u001b[90m// Internal navigation\u001b[39m\n \u001b[90m 132 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 133 |\u001b[39m         \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m`http://localhost:3001${mapping.url}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 134 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Successfully navigated to ${mapping.url}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 135 |\u001b[39m         \n \u001b[90m 136 |\u001b[39m         \u001b[90m// Take screenshot of destination page\u001b[39m\u001b[0m\n\u001b[2m    at testAllButtons (/Users/johnliddy/sales-tax-tracker/tests/e2e/button-functionality-builder.spec.ts:133:28)\u001b[22m\n\u001b[2m    at /Users/johnliddy/sales-tax-tracker/tests/e2e/button-functionality-builder.spec.ts:73:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🔍 Found 5 buttons on landing page\n"
+                        },
+                        {
+                          "text": "📍 Button: \"Login\" → window.location.href='/login'\n"
+                        },
+                        {
+                          "text": "📍 Button: \"Get Started\" → window.location.href='/signup'\n"
+                        },
+                        {
+                          "text": "📍 Button: \"\n                                    Try Demo\n                                \" → window.location.href='/demo'\n"
+                        },
+                        {
+                          "text": "📍 Button: \"\n                                    See Insights\n                                \" → window.location.href='/insights/demo'\n"
+                        },
+                        {
+                          "text": "📍 Button: \"\n                Start Free Trial\n            \" → window.location.href='/signup'\n"
+                        },
+                        {
+                          "text": "🗺️  Button Mappings: {\n  Login: { url: \u001b[32m'/login'\u001b[39m, title: \u001b[32m'Login - Sales Tax Insights'\u001b[39m, exists: \u001b[33mfalse\u001b[39m },\n  \u001b[32m'Get Started'\u001b[39m: {\n    url: \u001b[32m'/signup'\u001b[39m,\n    title: \u001b[32m'Get Started - Sales Tax Insights'\u001b[39m,\n    exists: \u001b[33mfalse\u001b[39m\n  },\n  \u001b[32m'Try Demo'\u001b[39m: {\n    url: \u001b[32m'/demo'\u001b[39m,\n    title: \u001b[32m'Interactive Demo - Sales Tax Insights'\u001b[39m,\n    exists: \u001b[33mfalse\u001b[39m\n  },\n  \u001b[32m'See Insights'\u001b[39m: {\n    url: \u001b[32m'/insights/demo'\u001b[39m,\n    title: \u001b[32m'Business Insights Demo - Sales Tax Insights'\u001b[39m,\n    exists: \u001b[33mfalse\u001b[39m\n  },\n  \u001b[32m'Start Free Trial'\u001b[39m: {\n    url: \u001b[32m'/signup'\u001b[39m,\n    title: \u001b[32m'Start Your Free Trial - Sales Tax Insights'\u001b[39m,\n    exists: \u001b[33mfalse\u001b[39m\n  }\n}\n"
+                        },
+                        {
+                          "text": "\n🧪 Testing button: Login → /login\n"
+                        },
+                        {
+                          "text": "✅ Login page exists\n"
+                        },
+                        {
+                          "text": "\n🧪 Testing button: Get Started → /signup\n"
+                        },
+                        {
+                          "text": "✅ Get Started page exists\n"
+                        },
+                        {
+                          "text": "\n🧪 Testing button: Try Demo → /demo\n"
+                        },
+                        {
+                          "text": "✅ Try Demo page exists\n"
+                        },
+                        {
+                          "text": "\n🧪 Testing button: See Insights → /insights/demo\n"
+                        },
+                        {
+                          "text": "✅ See Insights page exists\n"
+                        },
+                        {
+                          "text": "\n🧪 Testing button: Start Free Trial → /signup\n"
+                        },
+                        {
+                          "text": "✅ Start Free Trial page exists\n"
+                        },
+                        {
+                          "text": "📝 Updated routes file with new pages\n"
+                        },
+                        {
+                          "text": "\n🧪 Testing all button functionality...\n"
+                        },
+                        {
+                          "text": "\n🔘 Testing button: Login\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-14T13:36:14.464Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/johnliddy/sales-tax-tracker/test-results/button-functionality-build-c55d6-ns-and-create-missing-pages-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/johnliddy/sales-tax-tracker/test-results/button-functionality-build-c55d6-ns-and-create-missing-pages-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/johnliddy/sales-tax-tracker/test-results/button-functionality-build-c55d6-ns-and-create-missing-pages-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/johnliddy/sales-tax-tracker/tests/e2e/button-functionality-builder.spec.ts",
+                        "column": 28,
+                        "line": 133
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "93223764d0a65f8bebf7-eca52f9d915a5db24dc0",
+              "file": "button-functionality-builder.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-08-14T13:36:13.821Z",
+    "duration": 9784.001000000004,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

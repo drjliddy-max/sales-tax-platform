@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(lsof:*)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(brew services:*)",
+      "Bash(redis-cli:*)",
+      "Bash(npm run typecheck:*)",
+      "Bash(echo:*)",
+      "Bash(cat:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm install)",
+      "Bash(npm run test:e2e:debug:*)",
+      "Bash(npm run:*)",
+      "Bash(npx ts-node:*)",
+      "Bash(node:*)",
+      "Bash(kill:*)",
+      "Bash(npm install:*)",
+      "Bash(sed:*)",
+      "Bash(grep:*)",
+      "Bash(pkill:*)",
+      "Bash(npx tsc:*)",
+      "Bash(timeout:*)",
+      "Bash(touch:*)",
+      "Bash(mkdir:*)",
+      "Bash(DEBUG=*)",
+      "Bash(npx playwright codegen:*)",
+      "Bash(npx playwright test:*)",
+      "Bash(ts-node:*)",
+      "Bash(npx playwright:*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "Bash(npx prisma init:*)",
+      "Bash(npx prisma generate:*)",
+      "Bash(gtimeout 10s npm start)",
+      "Bash(cp:*)"
+    ],
+    "deny": [],
+    "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "/Users/johnliddy/sales-tax-frontend",
+      "/Users/johnliddy"
+    ]
+  }
+}

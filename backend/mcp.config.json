@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["@upstash/context7-mcp", "--transport", "stdio"],
+      "env": {
+        "CONTEXT7_PROJECT_PATH": "/Users/johnliddy/sales-tax-tracker",
+        "NODE_ENV": "development"
+      }
+    }
+  }
+}

@@ -1,0 +1,214 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String        @id @default(cuid())
+  clerkUserId     String        @unique
+  email           String        @unique
+  firstName       String?
+  lastName        String?
+  profileImageUrl String?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  auditLogs       AuditLog[]
+  businesses      Business[]
+  transactions    Transaction[]
+
+  @@map("users")
+}
+
+model Business {
+  id              String           @id @default(cuid())
+  name            String
+  taxId           String?
+  address         String
+  city            String
+  state           String
+  zipCode         String
+  country         String           @default("US")
+  phone           String?
+  email           String?
+  website         String?
+  industry        String?
+  businessType    String           @default("LLC")
+  nexusStates     String[]
+  isActive        Boolean          @default(true)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  ownerId         String
+  owner           User             @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  posIntegrations PosIntegration[]
+  reports         Report[]
+  taxRates        TaxRate[]
+  transactions    Transaction[]
+
+  @@map("businesses")
+}
+
+model Transaction {
+  id                    String        @id @default(cuid())
+  externalId            String?
+  amount                Decimal       @db.Decimal(10, 2)
+  taxAmount             Decimal       @db.Decimal(10, 2)
+  totalAmount           Decimal       @db.Decimal(10, 2)
+  currency              String        @default("USD")
+  federalTax            Decimal?      @db.Decimal(10, 4)
+  stateTax              Decimal?      @db.Decimal(10, 4)
+  countyTax             Decimal?      @db.Decimal(10, 4)
+  cityTax               Decimal?      @db.Decimal(10, 4)
+  specialDistrictTax    Decimal?      @db.Decimal(10, 4)
+  description           String?
+  productCategory       String?
+  customerType          String        @default("RETAIL")
+  isExempt              Boolean       @default(false)
+  exemptionReason       String?
+  saleLocation          String
+  customerLocation      String?
+  status                String        @default("COMPLETED")
+  paymentMethod         String?
+  posSource             String?
+  transactionDate       DateTime
+  createdAt             DateTime      @default(now())
+  updatedAt             DateTime      @updatedAt
+  businessId            String
+  userId                String?
+  originalTransactionId String?
+  business              Business      @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  originalTransaction   Transaction?  @relation("TransactionRefunds", fields: [originalTransactionId], references: [id])
+  refunds               Transaction[] @relation("TransactionRefunds")
+  user                  User?         @relation(fields: [userId], references: [id])
+
+  @@index([businessId, transactionDate])
+  @@index([status])
+  @@index([externalId])
+  @@map("transactions")
+}
+
+model TaxRate {
+  id                String    @id @default(cuid())
+  jurisdiction      String
+  jurisdictionCode  String
+  taxType           String
+  rate              Decimal   @db.Decimal(8, 6)
+  productCategories String[]
+  effectiveDate     DateTime
+  expirationDate    DateTime?
+  isActive          Boolean   @default(true)
+  description       String?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  businessId        String?
+  business          Business? @relation(fields: [businessId], references: [id], onDelete: Cascade)
+
+  @@index([jurisdiction, jurisdictionCode])
+  @@index([effectiveDate, expirationDate])
+  @@index([isActive])
+  @@map("tax_rates")
+}
+
+model PosIntegration {
+  id           String    @id @default(cuid())
+  provider     String
+  isActive     Boolean   @default(true)
+  credentials  Json
+  webhookUrl   String?
+  lastSyncAt   DateTime?
+  syncStatus   String    @default("PENDING")
+  errorMessage String?
+  settings     Json?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  businessId   String
+  business     Business  @relation(fields: [businessId], references: [id], onDelete: Cascade)
+
+  @@unique([businessId, provider])
+  @@map("pos_integrations")
+}
+
+model Report {
+  id                String    @id @default(cuid())
+  name              String
+  type              String
+  period            String
+  startDate         DateTime
+  endDate           DateTime
+  status            String    @default("PENDING")
+  fileUrl           String?
+  fileFormat        String?
+  totalTransactions Int?
+  totalAmount       Decimal?  @db.Decimal(12, 2)
+  totalTax          Decimal?  @db.Decimal(12, 2)
+  generatedAt       DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  businessId        String
+  business          Business  @relation(fields: [businessId], references: [id], onDelete: Cascade)
+
+  @@index([businessId, type])
+  @@index([startDate, endDate])
+  @@map("reports")
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  action     String
+  entityType String
+  entityId   String
+  oldValues  Json?
+  newValues  Json?
+  metadata   Json?
+  ipAddress  String?
+  userAgent  String?
+  timestamp  DateTime @default(now())
+  userId     String?
+  user       User?    @relation(fields: [userId], references: [id])
+
+  @@index([entityType, entityId])
+  @@index([action])
+  @@index([timestamp])
+  @@map("audit_logs")
+}
+
+model TaxJurisdiction {
+  id              String   @id @default(cuid())
+  name            String
+  type            String
+  code            String   @unique
+  parentCode      String?
+  isActive        Boolean  @default(true)
+  filingFrequency String?
+  dueDate         Int?
+  thresholdAmount Decimal? @db.Decimal(10, 2)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([type, code])
+  @@index([parentCode])
+  @@map("tax_jurisdictions")
+}
+
+model WebhookEvent {
+  id              String    @id @default(cuid())
+  provider        String
+  eventType       String
+  eventId         String?
+  payload         Json
+  processed       Boolean   @default(false)
+  processingError String?
+  attempts        Int       @default(0)
+  maxAttempts     Int       @default(3)
+  nextRetryAt     DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([provider, eventType])
+  @@index([processed])
+  @@index([nextRetryAt])
+  @@map("webhook_events")
+}

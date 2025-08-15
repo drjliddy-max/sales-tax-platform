@@ -1,0 +1,41 @@
+{
+  "name": "sales-tax-tracker",
+  "description": "Comprehensive sales tax tracking application with POS and accounting integrations",
+  "language": "typescript",
+  "framework": "node.js",
+  "entrypoints": [
+    "src/server.ts",
+    "src/app.ts",
+    "src/services/tax-calculation/TaxCalculator.ts",
+    "src/integrations/pos/SquareIntegration.ts"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts",
+    "*.ts",
+    "*.js",
+    "*.json"
+  ],
+  "exclude": [
+    "node_modules/**",
+    "dist/**",
+    "test-results/**",
+    "playwright-report/**",
+    "coverage/**"
+  ],
+  "analysis": {
+    "dependencies": true,
+    "imports": true,
+    "exports": true,
+    "functions": true,
+    "classes": true,
+    "interfaces": true,
+    "types": true
+  },
+  "features": {
+    "crossFileAnalysis": true,
+    "semanticSearch": true,
+    "codeCompletion": true,
+    "refactoring": true
+  }
+}
