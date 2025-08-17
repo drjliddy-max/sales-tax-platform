@@ -1,4 +1,4 @@
-import { ClerkProvider, SignedIn, SignedOut, RedirectToSignIn } from '@clerk/clerk-react'
+import { ClerkProvider, SignedIn, SignedOut, useUser } from '@clerk/clerk-react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import DashboardLayout from './layouts/DashboardLayout'
 import SalesTaxBotLanding from './components/SalesTaxBotLanding'
@@ -12,13 +12,27 @@ if (!clerkPubKey) {
   throw new Error("Missing Publishable Key")
 }
 
+// Component to handle home route logic
+function HomeRoute() {
+  const { isSignedIn } = useUser()
+  
+  // If user is signed in, redirect to dashboard
+  if (isSignedIn) {
+    return <Navigate to="/dashboard" replace />
+  }
+  
+  // If not signed in, show landing page
+  return <SalesTaxBotLanding />
+}
+
 function App() {
   return (
     <ClerkProvider publishableKey={clerkPubKey}>
       <Router>
         <Routes>
           {/* Public Routes */}
-          <Route path="/" element={<SalesTaxBotLanding />} />
+          <Route path="/" element={<HomeRoute />} />
+          <Route path="/landing" element={<SalesTaxBotLanding />} />
           
           {/* Protected Routes */}
           <Route
@@ -49,16 +63,6 @@ function App() {
                   <TransactionEntry />
                 </DashboardLayout>
               </SignedIn>
-            }
-          />
-          
-          {/* Redirect unsigned users to sign-in */}
-          <Route
-            path="*"
-            element={
-              <SignedOut>
-                <RedirectToSignIn />
-              </SignedOut>
             }
           />
         </Routes>
