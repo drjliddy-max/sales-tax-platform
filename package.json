@@ -1,0 +1,13 @@
+{
+  "name": "sales-tax-platform",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd Tracker/frontend && npm install && npm run build",
+    "start": "cd Tracker/frontend && npm start",
+    "dev": "cd Tracker/frontend && npm run dev"
+  },
+  "description": "Sales Tax Platform - Frontend deployment proxy",
+  "buildCommand": "npm run build",
+  "outputDirectory": "Tracker/frontend/dist"
+}
