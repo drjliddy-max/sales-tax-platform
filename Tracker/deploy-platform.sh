@@ -32,9 +32,15 @@ fi
 echo "🔧 Clearing Vercel project linking..."
 rm -rf .vercel 2>/dev/null
 
-# Deploy the dist folder directly to avoid project linking issues
-echo "🌐 Deploying dist folder to Vercel..."
-vercel dist --prod --yes
+# Try deploying from frontend directory with proper project linking
+echo "🌐 Deploying to sales-tax-platform project..."
+
+# Remove .vercel to force fresh project selection
+rm -rf .vercel 2>/dev/null
+
+# Link specifically to sales-tax-platform and deploy
+echo "Linking to sales-tax-platform project..."
+echo "sales-tax-platform" | vercel --prod --yes
 
 if [ $? -eq 0 ]; then
     echo ""
