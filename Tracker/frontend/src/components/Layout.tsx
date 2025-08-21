@@ -146,10 +146,10 @@ export default function Layout({ children, showNav = true }: LayoutProps) {
                     Demo
                   </Link>
                   <Link
-                    to="/insights/demo"
+                    to="/insights"
                     className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
                   >
-                    Sample Insights
+                    Business Insights
                   </Link>
                   <button
                     onClick={handleLogin}
@@ -231,11 +231,11 @@ export default function Layout({ children, showNav = true }: LayoutProps) {
                     Demo
                   </Link>
                   <Link
-                    to="/insights/demo"
+                    to="/insights"
                     className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Sample Insights
+                    Business Insights
                   </Link>
                   <button
                     onClick={handleLogin}

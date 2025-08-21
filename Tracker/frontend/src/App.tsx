@@ -374,16 +374,6 @@ function Reports() {
   );
 }
 
-function Insights() {
-  return (
-    <div className="max-w-7xl mx-auto py-6 px-4">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Business Insights</h1>
-      <div className="bg-white rounded-lg shadow p-6">
-        <p className="text-gray-600">Business insights will be implemented here.</p>
-      </div>
-    </div>
-  );
-}
 
 function Demo() {
   return (
@@ -408,7 +398,7 @@ function Demo() {
           <div>
             <h3 className="font-semibold text-lg mb-3">Try Now:</h3>
             <a 
-              href="/insights/demo"
+              href="/insights"
               className="btn-primary block text-center mb-3"
             >
               View Business Insights
@@ -583,11 +573,6 @@ function App() {
           <Route path="/reports" element={
             <ProtectedRoute requiredRole="CLIENT">
               <Reports />
-            </ProtectedRoute>
-          } />
-          <Route path="/insights" element={
-            <ProtectedRoute requiredRole="CLIENT">
-              <Insights />
             </ProtectedRoute>
           } />
           <Route path="/pos" element={
