@@ -1,0 +1,3 @@
+Test file to verify Vercel GitHub integration
+Created at: $(date)
+Directory structure verification for sales-tax-platform Vercel project
