@@ -1,0 +1,1 @@
+{"version":3,"file":"RevenueService.d.ts","sourceRoot":"","sources":["../../src/services/RevenueService.ts"],"names":[],"mappings":"AAMA,qBAAa,cAAc;WAKZ,oBAAoB,IAAI,OAAO,CAAC,IAAI,CAAC;WA4NrC,2BAA2B,IAAI,OAAO,CAAC,GAAG,EAAE,CAAC;WA8B7C,iBAAiB,IAAI,OAAO,CAAC;QACxC,GAAG,EAAE,MAAM,CAAC;QACZ,GAAG,EAAE,MAAM,CAAC;QACZ,YAAY,EAAE,MAAM,CAAC;QACrB,mBAAmB,EAAE,MAAM,CAAC;KAC7B,CAAC;CAyBH"}

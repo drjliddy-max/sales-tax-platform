@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Help Center Navigation Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+        .success { background-color: #d4edda; border-color: #c3e6cb; }
+        .error { background-color: #f8d7da; border-color: #f5c6cb; }
+    </style>
+</head>
+<body>
+    <h1>Help Center Navigation Verification</h1>
+    <p>This page verifies that the help center navigation buttons are properly implemented.</p>
+    
+    <div id="results"></div>
+
+    <script>
+        // Test the help center page
+        async function testHelpCenter() {
+            const results = document.getElementById('results');
+            
+            try {
+                // Test 1: Check if help center page exists
+                const response = await fetch('/help');
+                const html = await response.text();
+                
+                // Test 2: Check for navigation button elements
+                const hasHomeButton = html.includes('Back to Home') || html.includes('<Home');
+                const hasDashboardButton = html.includes('Dashboard') || html.includes('<BarChart3');
+                const hasSticky = html.includes('sticky top-0');
+                
+                // Display results
+                results.innerHTML = `
+                    <div class="test ${response.ok ? 'success' : 'error'}">
+                        <strong>Help Center Page Load:</strong> ${response.ok ? 'SUCCESS' : 'FAILED'} (${response.status})
+                    </div>
+                    <div class="test ${hasHomeButton ? 'success' : 'error'}">
+                        <strong>Home Navigation Button:</strong> ${hasHomeButton ? 'FOUND' : 'MISSING'}
+                    </div>
+                    <div class="test ${hasDashboardButton ? 'success' : 'error'}">
+                        <strong>Dashboard Navigation Button:</strong> ${hasDashboardButton ? 'FOUND' : 'MISSING'}
+                    </div>
+                    <div class="test ${hasSticky ? 'success' : 'error'}">
+                        <strong>Sticky Navigation Bar:</strong> ${hasSticky ? 'FOUND' : 'MISSING'}
+                    </div>
+                    <div class="test">
+                        <strong>Visit Help Center:</strong> <a href="/help" target="_blank">Open Help Center</a>
+                    </div>
+                `;
+                
+            } catch (error) {
+                results.innerHTML = `
+                    <div class="test error">
+                        <strong>Error:</strong> ${error.message}
+                    </div>
+                `;
+            }
+        }
+        
+        // Run test when page loads
+        testHelpCenter();
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+
+> sales-tax-frontend-monitoring@1.0.0 dev
+> vite
+
+10:49:11 AM [vite] (client) Re-optimizing dependencies because lockfile has changed
+
+  VITE v7.1.2  ready in 98 ms
+
+  ➜  Local:   http://localhost:3001/
+  ➜  Network: use --host to expose
+10:54:13 AM [vite] (client) hmr update /src/App.tsx, /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/components/AnalyticsDashboard.tsx, /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/components/BulkOperations.tsx, /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/IntegrityRepairTool.tsx
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/MigrationProgressTracker.tsx
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/MigrationScheduler.tsx
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/MobileNavigation.tsx
+10:54:13 AM [vite] (client) hmr update /src/components/OnboardingDashboard.tsx, /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/POSIntegrations.tsx
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/ResponsiveLayout.tsx
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/TenantAwareNavigation.tsx
+10:54:13 AM [vite] (client) hmr update /src/components/TenantManagementDashboard.tsx, /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/components/TenantMigrationDashboard.tsx, /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/components/TenantSelector.tsx, /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/components/TenantSettings.tsx, /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/TutorialOverlay.tsx
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/ValidationDashboard.tsx
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/App.tsx, /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/contexts/TenantContext.tsx, /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/ResponsiveLayout.tsx
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/TenantManagementDashboard.tsx, /src/components/TenantSelector.tsx, /src/components/TenantSettings.tsx, /src/contexts/TenantContext.tsx, /src/pages/DemoInsights.tsx, /src/components/TenantMigrationDashboard.tsx, /src/components/MigrationProgressTracker.tsx, /src/components/ValidationDashboard.tsx, /src/components/IntegrityRepairTool.tsx, /src/components/MigrationScheduler.tsx
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/MigrationScheduler.tsx
+10:54:13 AM [vite] changed tsconfig file detected: /Users/johnliddy/sales-tax-tracker/frontend/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/ValidationDashboard.tsx, /src/components/IntegrityRepairTool.tsx
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/OnboardingDashboard.tsx
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/TenantMigrationDashboard.tsx, /src/components/MigrationProgressTracker.tsx
+10:54:13 AM [vite] (client) hmr update /src/assets/index.css
+6:48:09 AM [vite] (client) hmr update /src/pages/DemoInsights.tsx, /src/assets/index.css
+6:49:41 AM [vite] (client) hmr update /src/pages/DemoInsights.tsx, /src/assets/index.css
+6:56:42 AM [vite] (client) hmr update /src/pages/DemoInsights.tsx, /src/assets/index.css
+6:57:42 AM [vite] (client) hmr update /src/assets/index.css, /src/components/Layout.tsx
+6:57:48 AM [vite] (client) hmr update /src/App.tsx, /src/contexts/TenantContext.tsx, /src/components/TenantAwareNavigation.tsx, /src/components/TenantManagementDashboard.tsx, /src/components/TenantSelector.tsx, /src/components/TenantSettings.tsx, /src/pages/DemoInsights.tsx, /src/components/TenantMigrationDashboard.tsx, /src/components/MigrationProgressTracker.tsx, /src/components/ValidationDashboard.tsx, /src/components/IntegrityRepairTool.tsx, /src/components/MigrationScheduler.tsx, /src/components/Layout.tsx, /src/assets/index.css
+6:57:56 AM [vite] (client) hmr update /src/App.tsx, /src/contexts/TenantContext.tsx, /src/components/TenantAwareNavigation.tsx, /src/components/TenantManagementDashboard.tsx, /src/components/TenantSelector.tsx, /src/components/TenantSettings.tsx, /src/pages/DemoInsights.tsx, /src/components/TenantMigrationDashboard.tsx, /src/components/MigrationProgressTracker.tsx, /src/components/ValidationDashboard.tsx, /src/components/IntegrityRepairTool.tsx, /src/components/MigrationScheduler.tsx, /src/components/Layout.tsx, /src/assets/index.css
+7:13:07 AM [vite] (client) hmr update /src/pages/LandingPage.tsx, /src/assets/index.css
+7:16:45 AM [vite] (client) hmr update /src/App.tsx, /src/assets/index.css
+7:16:55 AM [vite] (client) hmr update /src/App.tsx, /src/assets/index.css
+7:17:15 AM [vite] (client) hmr update /src/App.tsx, /src/assets/index.css
+7:17:28 AM [vite] (client) hmr update /src/App.tsx, /src/assets/index.css
+7:21:08 AM [vite] (client) hmr update /src/App.tsx, /src/assets/index.css
+7:21:38 AM [vite] (client) hmr update /src/App.tsx, /src/assets/index.css
+7:21:44 AM [vite] (client) hmr update /src/App.tsx, /src/assets/index.css
+7:29:27 AM [vite] (client) hmr update /src/assets/index.css, /src/pages/HelpCenter.tsx, /src/components/help/AIChat.tsx, /src/components/help/HelpWidget.tsx
+7:34:19 AM [vite] (client) hmr update /src/assets/index.css, /src/pages/HelpCenter.tsx, /src/components/help/AIChat.tsx, /src/components/help/HelpWidget.tsx
+7:41:00 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+7:41:14 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+8:06:27 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+8:06:33 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+8:06:47 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+8:07:00 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+8:07:13 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+8:07:18 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+8:20:21 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+8:20:29 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+8:21:17 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+8:25:25 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+8:34:06 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+8:35:02 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+8:36:03 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+11:23:11 AM [vite] (client) hmr update /src/App.tsx, /src/assets/index.css
+11:23:17 AM [vite] (client) hmr update /src/App.tsx, /src/assets/index.css
+11:23:38 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+11:23:55 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+11:36:04 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+11:36:12 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+11:36:19 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+11:36:23 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+11:36:31 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+11:36:37 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+11:36:49 AM [vite] (client) hmr update /src/pages/HelpCenter.tsx, /src/assets/index.css
+11:37:00 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+11:37:13 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+11:37:19 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+11:37:25 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+11:37:32 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+11:37:38 AM [vite] (client) hmr update /src/assets/index.css, /src/components/help/AIChat.tsx
+11:39:45 AM [vite] .env changed, restarting server...
+11:39:46 AM [vite] server restarted.
+12:21:57 PM [vite] (client) page reload verify-help-navigation.html
+12:34:10 PM [vite] (client) page reload verify-help-navigation.html
