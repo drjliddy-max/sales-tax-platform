@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "cd Tracker/frontend && npm install && npm run build",
-    "start": "cd Tracker/frontend && npm start",
-    "dev": "cd Tracker/frontend && npm run dev"
+    "build": "cd Tracker/frontend && npm ci && npm run build",
+    "start": "cd Tracker/frontend && npm start", 
+    "dev": "cd Tracker/frontend && npm run dev",
+    "install": "cd Tracker/frontend && npm install"
   },
-  "description": "Sales Tax Platform - Frontend deployment proxy",
-  "buildCommand": "npm run build",
-  "outputDirectory": "Tracker/frontend/dist"
+  "description": "Sales Tax Platform - Frontend deployment proxy"
 }
